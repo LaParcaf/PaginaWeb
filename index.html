@@ -29,8 +29,9 @@
                 <a href="pages/contacto.html">Contáctanos</a>
 
                 <div class="nav-item has-submenu">
-                    <a href="pages/servicios.html" aria-expanded="false">Servicios</a>
-                    <div class="dropdown-menu" aria-label="Opciones de servicios">
+                    <a href="pages/servicios.html">Servicios</a>
+                    <button class="submenu-toggle" type="button" aria-label="Mostrar opciones de servicios" aria-expanded="false" aria-controls="menu-servicios"><span aria-hidden="true">⌄</span></button>
+                    <div class="dropdown-menu" id="menu-servicios" aria-label="Opciones de servicios">
                         <a href="pages/admision.html">Admisión</a>
                         <a href="pages/matricula.html">Matrícula</a>
                         <a href="pages/tramites.html">Trámites</a>
@@ -38,8 +39,9 @@
                 </div>
 
                 <div class="nav-item has-submenu">
-                    <a href="pages/nosotros.html" aria-expanded="false">Otras páginas</a>
-                    <div class="dropdown-menu" aria-label="Otras páginas institucionales">
+                    <a href="pages/nosotros.html">Otras páginas</a>
+                    <button class="submenu-toggle" type="button" aria-label="Mostrar otras páginas" aria-expanded="false" aria-controls="menu-otras-paginas"><span aria-hidden="true">⌄</span></button>
+                    <div class="dropdown-menu" id="menu-otras-paginas" aria-label="Otras páginas institucionales">
                         <a href="pages/nosotros.html">Nosotros</a>
                         <a href="pages/carreras.html">Programas de estudio</a>
                         <a href="pages/noticias.html">Noticias</a>
@@ -160,6 +162,14 @@
                     <h2>Programas de estudio</h2>
                 </div>
 
+                <div class="program-tools">
+                    <label class="program-search">
+                        <span class="sr-only">Buscar un programa de estudio</span>
+                        <input id="program-search" type="search" placeholder="Buscar carrera o especialidad..." autocomplete="off">
+                    </label>
+                    <p id="program-results" role="status" aria-live="polite"></p>
+                </div>
+
                 <div class="card-grid programs-grid">
                     <article class="program-card">
                         <div class="icon">01</div>
@@ -204,9 +214,9 @@
                 <div class="section-heading split-heading">
                     <div><span class="section-tag">Agenda</span><h2>Lo que está pasando en Huanta</h2></div>
                     <div class="agenda-filters" role="group" aria-label="Filtrar eventos">
-                        <button class="filter-button is-active" type="button" data-filter="all">Todos</button>
-                        <button class="filter-button" type="button" data-filter="academico">Académico</button>
-                        <button class="filter-button" type="button" data-filter="comunidad">Comunidad</button>
+                        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+                        <button class="filter-button" type="button" data-filter="academico" aria-pressed="false">Académico</button>
+                        <button class="filter-button" type="button" data-filter="comunidad" aria-pressed="false">Comunidad</button>
                     </div>
                 </div>
                 <div class="events-list">
@@ -214,6 +224,7 @@
                     <article class="event-item" data-category="comunidad"><time datetime="2026-05-22"><strong>22</strong><span>MAY<br>2026</span></time><div><span class="event-type">Comunidad</span><h3>Feria de innovación tecnológica</h3><p>Proyectos de nuestros estudiantes abiertos a toda la comunidad.</p></div><span class="event-place">Patio institucional</span></article>
                     <article class="event-item" data-category="academico"><time datetime="2026-06-18"><strong>18</strong><span>JUN<br>2026</span></time><div><span class="event-type">Académico</span><h3>Orientación vocacional</h3><p>Conoce los programas, talleres y oportunidades de empleabilidad.</p></div><span class="event-place">Sala de usos múltiples</span></article>
                 </div>
+                <p class="event-results" role="status" aria-live="polite"></p>
             </div>
         </section>
 
@@ -332,17 +343,18 @@
                 <form class="contact-form">
                     <label>
                         <span>Nombre</span>
-                        <input type="text" placeholder="Tu nombre" />
+                        <input name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required />
                     </label>
                     <label>
                         <span>Correo</span>
-                        <input type="email" placeholder="Tu correo" />
+                        <input name="correo" type="email" placeholder="Tu correo" autocomplete="email" required />
                     </label>
                     <label>
                         <span>Mensaje</span>
-                        <textarea rows="5" placeholder="Escribe tu mensaje"></textarea>
+                        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
                     </label>
                     <button type="submit" class="btn btn-primary">Enviar consulta <span aria-hidden="true">↗</span></button>
+                    <p class="form-feedback" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
@@ -387,6 +399,7 @@
     <div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" hidden><button class="lightbox-close" type="button" aria-label="Cerrar imagen" data-close-lightbox>×</button><img src="" alt="" /></div>
     <div class="toast" role="status" aria-live="polite"></div>
     <button class="back-to-top" type="button" aria-label="Volver arriba">↑</button>
+    <script src="js/app.js" defer></script>
 </body>
 
 </html>
