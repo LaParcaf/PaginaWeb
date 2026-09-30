@@ -12,7 +12,7 @@
     <title>IESTP Huanta | Formación técnica de calidad</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/tailwind-build.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
@@ -21,8 +21,8 @@
     <header class="site-header">
         <div class="container navbar">
             <a href="#inicio" class="brand" aria-label="Inicio IESTP Huanta">
-                <span class="brand-mark">I</span>
-                <span>IESTP Huanta</span>
+                <img src="assets/logo-huanta.png" alt="" class="brand-logo">
+                <span><strong>IESTP</strong><small>Huanta · Educación pública</small></span>
             </a>
 
             <nav class="main-nav" aria-label="Menú principal">
@@ -55,18 +55,19 @@
 
     <main id="inicio">
         <section class="hero">
+            <img class="hero-background" src="https://iestphuanta.edu.pe/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-10.07.05-AM-650x650.jpeg" alt="Estudiantes de la comunidad educativa de Huanta" fetchpriority="high">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <span class="eyebrow">Educación técnica pública</span>
-                    <h1>Construye tu futuro con formación de calidad</h1>
+                    <span class="eyebrow">Instituto de Educación Superior Público · Ayacucho</span>
+                    <h1>Tu talento merece un lugar <em>para crecer.</em></h1>
                     <p>
-                        En el Instituto de Educación Superior Público Huanta, impulsamos talentos con
-                        una educación técnica innovadora, cercana y orientada al mercado laboral.
+                        Aprende haciendo, con formación técnica conectada con las personas,
+                        las ideas y las oportunidades de nuestra región.
                     </p>
 
                     <div class="hero-actions">
-                        <a href="#carreras" class="btn btn-primary">Ver programas</a>
-                        <a href="#nosotros" class="btn btn-secondary">Conócenos</a>
+                        <a href="#carreras" class="btn btn-primary">Explorar carreras <span aria-hidden="true">↗</span></a>
+                        <a href="#nosotros" class="btn btn-secondary">Conocer el instituto</a>
                     </div>
 
                     <ul class="hero-metrics" aria-label="Estadísticas del instituto">
@@ -85,16 +86,14 @@
                     </ul>
                 </div>
 
-                <div class="hero-visual" aria-label="Imagen institucional">
-                    <div class="hero-card highlight-card">
-                        <span class="badge">2026</span>
-                        <h3>Formación para el desarrollo regional</h3>
-                        <p>Preparando profesionales con valores, innovación y competencias sólidas.</p>
-                    </div>
-                    <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Estudiantes del IESTP Huanta" />
-                    </div>
-                </div>
+            </div>
+        </section>
+
+        <section class="quick-links" aria-label="Accesos rápidos">
+            <div class="container quick-links-grid">
+                <a href="#carreras" class="quick-link"><span class="quick-link-icon">01</span><span><strong>Elige tu programa</strong><small>Conoce las especialidades</small></span><span class="arrow">↗</span></a>
+                <a href="#agenda" class="quick-link"><span class="quick-link-icon">02</span><span><strong>Agenda institucional</strong><small>Eventos y actividades</small></span><span class="arrow">↗</span></a>
+                <a href="#contacto" class="quick-link"><span class="quick-link-icon">03</span><span><strong>Habla con admisión</strong><small>Resuelve tus dudas</small></span><span class="arrow">↗</span></a>
             </div>
         </section>
 
@@ -166,31 +165,54 @@
                         <div class="icon">01</div>
                         <h3>Diseño y Programación Web</h3>
                         <p>Desarrollo de aplicaciones web modernas, interfaces atractivas y soluciones digitales funcionales.</p>
+                        <button class="text-button program-detail" type="button" data-program="Diseño y Programación Web">Ver plan de estudios <span>↗</span></button>
                     </article>
 
                     <article class="program-card">
                         <div class="icon">02</div>
                         <h3>Enfermería Técnica</h3>
                         <p>Formación especializada para atender necesidades del sector salud con ética y responsabilidad.</p>
+                        <button class="text-button program-detail" type="button" data-program="Enfermería Técnica">Ver plan de estudios <span>↗</span></button>
                     </article>
 
                     <article class="program-card">
                         <div class="icon">03</div>
                         <h3>Mecatrónica Automotriz</h3>
                         <p>Especialización en sistemas automotrices, diagnóstico y mantenimiento tecnológico.</p>
+                        <button class="text-button program-detail" type="button" data-program="Mecatrónica Automotriz">Ver plan de estudios <span>↗</span></button>
                     </article>
 
                     <article class="program-card">
                         <div class="icon">04</div>
                         <h3>Industrias Alimentarias</h3>
                         <p>Procesamiento, control de calidad y seguridad en la producción de alimentos.</p>
+                        <button class="text-button program-detail" type="button" data-program="Industrias Alimentarias">Ver plan de estudios <span>↗</span></button>
                     </article>
 
                     <article class="program-card">
                         <div class="icon">05</div>
                         <h3>Producción Agropecuaria</h3>
                         <p>Gestión integral de producción agrícola y pecuaria con enfoque sostenible.</p>
+                        <button class="text-button program-detail" type="button" data-program="Producción Agropecuaria">Ver plan de estudios <span>↗</span></button>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="agenda" class="section agenda">
+            <div class="container">
+                <div class="section-heading split-heading">
+                    <div><span class="section-tag">Agenda</span><h2>Lo que está pasando en Huanta</h2></div>
+                    <div class="agenda-filters" role="group" aria-label="Filtrar eventos">
+                        <button class="filter-button is-active" type="button" data-filter="all">Todos</button>
+                        <button class="filter-button" type="button" data-filter="academico">Académico</button>
+                        <button class="filter-button" type="button" data-filter="comunidad">Comunidad</button>
+                    </div>
+                </div>
+                <div class="events-list">
+                    <article class="event-item" data-category="academico"><time datetime="2026-04-15"><strong>15</strong><span>ABR<br>2026</span></time><div><span class="event-type">Académico</span><h3>Inicio del periodo académico</h3><p>Recepción de estudiantes y bienvenida a la comunidad educativa.</p></div><span class="event-place">Auditorio principal</span></article>
+                    <article class="event-item" data-category="comunidad"><time datetime="2026-05-22"><strong>22</strong><span>MAY<br>2026</span></time><div><span class="event-type">Comunidad</span><h3>Feria de innovación tecnológica</h3><p>Proyectos de nuestros estudiantes abiertos a toda la comunidad.</p></div><span class="event-place">Patio institucional</span></article>
+                    <article class="event-item" data-category="academico"><time datetime="2026-06-18"><strong>18</strong><span>JUN<br>2026</span></time><div><span class="event-type">Académico</span><h3>Orientación vocacional</h3><p>Conoce los programas, talleres y oportunidades de empleabilidad.</p></div><span class="event-place">Sala de usos múltiples</span></article>
                 </div>
             </div>
         </section>
@@ -264,9 +286,21 @@
                 </div>
 
                 <div class="gallery-grid">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Estudiantes en clase" />
-                    <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80" alt="Personas en laboratorio" />
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Grupo de estudiantes" />
+                    <button class="gallery-item" type="button"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Estudiantes en clase" /></button>
+                    <button class="gallery-item" type="button"><img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80" alt="Personas en laboratorio" /></button>
+                    <button class="gallery-item" type="button"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Grupo de estudiantes" /></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq">
+            <div class="container faq-grid">
+                <div class="section-heading"><span class="section-tag">Preguntas frecuentes</span><h2>Todo empieza con una pregunta</h2><p>Encuentra respuestas rápidas sobre admisión y matrícula.</p></div>
+                <div class="faq-list">
+                    <details open><summary>¿Cómo puedo postular al instituto?</summary><p>Revisa la convocatoria vigente y acércate a admisión con tus documentos. Nuestro equipo te orientará paso a paso.</p></details>
+                    <details><summary>¿Qué documentos necesito para matricularme?</summary><p>Necesitarás tu documento de identidad, certificado de estudios y los requisitos indicados en la convocatoria del periodo.</p></details>
+                    <details><summary>¿Puedo conocer las instalaciones?</summary><p>Sí. Escríbenos para coordinar una visita guiada a talleres, laboratorios y espacios de aprendizaje.</p></details>
+                    <details><summary>¿Dónde consulto los costos y fechas?</summary><p>El equipo de admisión puede brindarte información actualizada por teléfono, correo o mediante el formulario.</p></details>
                 </div>
             </div>
         </section>
@@ -308,7 +342,7 @@
                         <span>Mensaje</span>
                         <textarea rows="5" placeholder="Escribe tu mensaje"></textarea>
                     </label>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary">Enviar consulta <span aria-hidden="true">↗</span></button>
                 </form>
             </div>
         </section>
@@ -345,6 +379,14 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="program-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-content"><button class="modal-close" type="button" aria-label="Cerrar ventana" data-close-modal>×</button><span class="section-tag">Programa de estudio</span><h2 id="modal-title"></h2><p>Una ruta práctica para desarrollar competencias profesionales y responder a las necesidades de nuestra región.</p><div class="modal-highlights"><span>6 semestres</span><span>Prácticas formativas</span><span>Certificación modular</span></div><a href="#contacto" class="btn btn-primary" data-close-modal>Solicitar información <span>↗</span></a></div>
+    </div>
+    <div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" hidden><button class="lightbox-close" type="button" aria-label="Cerrar imagen" data-close-lightbox>×</button><img src="" alt="" /></div>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <button class="back-to-top" type="button" aria-label="Volver arriba">↑</button>
 </body>
 
 </html>
